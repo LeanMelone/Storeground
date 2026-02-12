@@ -108,3 +108,9 @@ main {
 .impressum {
     color: #bbb;
 }
+
+/* Text Highlight */
+.highlight {
+    color: #c31515;
+    font-weight: 600;
+}
