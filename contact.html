@@ -14,7 +14,12 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <a class="brand" href="index.html">Storeground</a>
+            <a href="index.html">
+                <picture class="logo">
+                    <source srcset="IMG/Storeground_Logo.webp" type="image/webp">
+                    <img src="IMG/Storeground_Logo.png" alt="Storeground Logo"> 
+                </picture>
+            </a>
             <nav class="nav">
                 <ul>
                     <li><a href="infotickets.html">Info & Tickets</a></li>
@@ -29,28 +34,77 @@
     <main>
         <h1>Contact</h1>
 
-        <p>
-            Schreib uns bei Fragen zu Tickets, Bands oder Lost & Found.<br>
-            Wir antworten normalerweise innerhalb von <strong>48</strong> Stunden.
-        </p>
+        <form action="https://api.web3forms.com/submit" method="post" class="contact-form">
+            <input type="hidden" name="access_key" value="1edda660-a948-4657-b14c-86b412332858">
+
+            <fieldset>
+                <legend>Persönliche Daten</legend>
+
+                <div>
+                    <label for="name">Name:*</label><br>
+                    <input type="text" id="name" name="name" minlength="2" maxlength="20" required>
+                </div>
+                <div>
+                    <label for="email">E-Mail:*</label><br>
+                    <input type="email" id="email" name="email" required placeholder="email@email.ch">
+                </div>
+                <div>
+                    <label for="alter">Alter:*</label><br>
+                    <input type="number" id="alter" name="alter" min="0" max="140" required>
+                </div>
+                <div>
+                    <label>Geschlecht:</label><br>
+                    <input type="radio" id="männlich" name="geschlecht" value="männlich">
+                    <label for="männlich">Männlich</label>
+                    <input type="radio" id="weiblich" name="geschlecht" value="weiblich">
+                    <label for="weiblich">Weiblich</label>
+                    <input type="radio" id="divers" name="geschlecht" value="divers">
+                    <label for="divers">Divers</label>
+                </div>
+                <div>
+                    <label for="tel">Telefonnummer:</label><br>
+                    <input type="tel" id="tel" name="tel" pattern="[0-9]{3}[ ][0-9]{3}[ ][0-9]{2}[ ][0-9]{2}" placeholder="123 456 78 90">
+                </div>
+
+            </fieldset>
+
+            <div>
+                <label for="ticket">Ticketkategorie:*</label><br>
+                <select id="ticket" name="ticket" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="ticket">Ticket</option>
+                    <option value="vip">VIP-Ticket</option>
+                    <option value="backstage">Backstage-Pass</option>
+                </select>
+            </div>
+            <div>
+                <label for="message">Nachricht:*</label><br>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div>
+                <label for="date">Datum:*</label><br>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div>
+                <label for="time">Uhrzeit:*</label><br>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <div>
+                <input type="checkbox" id="datenschutz" name="datenschutz" required>
+                <label for="datenschutz">Ich akzeptiere die Datenschutzerklärung.</label>
+            </div>
+
+            <button type="submit">Absenden</button>
+        </form>
 
         <section>
             <h2>Kontaktmöglichkeiten</h2>
             <ul>
-                <li>Allgemein: <span class="highlight">info@storeground.ch</span></li>
-                <li>Booking: booking@storeground.ch</li>
-                <li>Support: support@storeground.ch</li>
+                <li><a href="mailto:info@storeground.ch">Allgemein: info@storeground.ch</a></li>
+                <li><a href="mailto:booking@storeground.ch">Booking: booking@storeground.ch</a></li>
+                <li><a href="mailto:support@storeground.ch">Support: support@storeground.ch</a></li>
+                <li><a href="tel:0123456789">Telefon: 012 345 67 89</a></li>
             </ul>
-        </section>
-
-        <section>
-            <h2>FAQ kurz</h2>
-            <dl>
-                <dt>Einlasszeit?</dt>
-                <dd>Ab 18<sub>00</sub> Uhr</dd>
-                <dt>Alter?</dt>
-                <dd>Unter 16 nur in Begleitung</dd>
-            </dl>
         </section>
 
         <address>

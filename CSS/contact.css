@@ -114,3 +114,9 @@ main {
     color: #c31515;
     font-weight: 600;
 }
+
+/* Logo */
+.logo *{
+    height: 46px;
+    width: auto;
+}

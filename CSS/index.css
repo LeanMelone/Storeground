@@ -104,3 +104,9 @@ main {
 .impressum {
     color: #bbb;
 }
+
+/* Logo */
+.logo *{
+    height: 46px;
+    width: auto;
+}
